@@ -66,7 +66,7 @@ YUI().add("elastic-textarea", function(Y) {
       writeOnce: true,
       setter: function(val) {
         var n = Y.one(val);
-        if (n && n.get('nodeName') == "TEXTAREA") {
+        if (n && n.get('nodeName').toUpperCase() == "TEXTAREA") {
           return n;
         } else {
           return Y.Attribute.INVALID_VALUE;
